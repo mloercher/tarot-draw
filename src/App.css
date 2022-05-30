@@ -48,7 +48,7 @@
 
 .card {
   height: 100%;
-  width: 18%;
+  width: 15rem;
   border-radius: 5%;
 }
 
@@ -62,5 +62,6 @@
 .row{
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   width: 95vw;
 }
