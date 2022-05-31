@@ -46,18 +46,24 @@
   flex-wrap: wrap;
 }
 
-.card {
-  height: 100%;
-  width: 15rem;
-  border-radius: 5%;
+
+
+.card-front, .card-back{
+  position: absolute;
 }
+
+
 
 .container{
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100vw;
+  
 }
+
+
+
 
 .row{
   display: flex;
@@ -65,3 +71,43 @@
   flex-wrap: wrap;
   width: 95vw;
 }
+
+
+
+
+
+
+.card-container{
+  position: relative;
+  border: solid black;
+  height: 400px;
+  width: 14.6rem;
+}
+
+.card{
+  position: absolute;
+  width: 90%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
+}
+
+.card:hover{
+transform: rotateY(180deg);
+}
+
+.card-front{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+}
+.card-back{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+}
+
+

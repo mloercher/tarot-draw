@@ -71,20 +71,29 @@ function App() {
         <Row>
           {randomDraw.map((reading) => {
             return (
-              <Card key={reading.name}>
-                <Card.Img src={"../images/cards/" + reading.img} />
-                <Card.Body>
-                  <Card.Title >
-                    {reading.name}
-                  </Card.Title>
-                  <Card.Subtitle >
-                    {reading.suit}
-                  </Card.Subtitle>
-                  <Card.Text >
-                    {reading.fortune_telling}
-                  </Card.Text>
-                </Card.Body>
-              </Card>
+              <div className='card-container'>
+                <Card key={reading.name}>
+                   <div className='card-front'>
+                    <Card.Img src={"../images/back-tarot.jpeg"} />
+                  </div>
+
+                  <div className='card-back'>
+                    <Card.Img src={"../images/cards/" + reading.img} />
+                    <Card.Body>
+                      <Card.Title >
+                        {reading.name}
+                      </Card.Title>
+                      <Card.Subtitle >
+                        {reading.suit}
+                      </Card.Subtitle>
+                      <Card.Text >
+                        {reading.fortune_telling}
+                      </Card.Text>
+                    </Card.Body>
+                  </div>
+                </Card>
+              </div>
+
             );
           })}
         </Row>
